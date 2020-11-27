@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        #demo{
+            background-color: red;
+            color: #fff;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            border: none;
+            transition: 2s;
+
+        }
+        #demo:hover{
+            color: #000;
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <button id="demo">Download</button>
+    <button id = "demo" onclick="this.innerHTML='Ooops!'">Click on this text!</button>
+    <script src="basic_javascript.js"></script>
+    <script>
+       const demoHover = document.getElementById("demo");
+       demoHover.addEventListener("mouseout", function(){
+            demoHover.innerText = "Downloading...";
+       });
+    </script>
+</body>
+</html>
